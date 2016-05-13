@@ -7,6 +7,12 @@
             - Add a property named `contents` and set it to be an empty array.
  */
 
+var plainBox = {};
+plainBox.color = 'yellow';
+plainBox.size = 5;
+plainBox.contents = [];
+
+console.log(plainBox);
 
 /*
     # An object with properties declared line by line
@@ -23,6 +29,13 @@
             - add a key named `passengers` and set it to be an empty array.
  */
 
+/*var stockCar = {
+  model: 'Ford',
+  year: 2008,
+  automaticTransmission: true,
+  driver: null,
+  passengers: []
+};*/
 
 /*
     Add new property inside a function
@@ -38,6 +51,14 @@
         Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
  */
 
+/*var plainPerson = {};
+function buildPerson(person, nameString, age){
+  person.name = nameString;
+  person.age = age;
+
+  return person;
+}
+var completePerson = buildPerson(plainPerson, "Jane", 23);*/
 
 /*
     # Display values of objects that are inside an array
@@ -62,6 +83,68 @@
             ...
  */
 
+/*        var arrayOfObjects = [
+  {
+    id: 0,
+    date: "Monday Jan 25 2015 2:01 PM",
+    total: "279.38"
+  },
+  {
+    id: 1,
+    date: "Monday Jan 27 2015 11:31 AM",
+    total: "79.80"
+  },
+  {
+    id: 2,
+    date: "Monday Feb 1 2015 7:56 AM",
+    total: "15.62"
+  },
+  {
+    id: 3,
+    date: "Monday Feb 1 2015 9:43 AM",
+    total: "19.83"
+  },
+  {
+    id: 4,
+    date: "Monday Feb 1 2015 11:08 PM",
+    total: "56.69"
+  },
+  {
+    id: 5,
+    date: "Monday Feb 13 2015 10:22 AM",
+    total: "137.92"
+  },
+  {
+    id: 6,
+    date: "Monday Feb 14 2015 6:54 PM",
+    total: "938.65"
+  },
+  {
+    id: 7,
+    date: "Monday Feb 14 2015 7:17 PM",
+    total: "43.77"
+  },
+  {
+    id: 8,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "28.54"
+  },
+  {
+    id: 9,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "194.33"
+  }
+];
+
+function printProcessedOrders(orders){
+  for (var i = 0; i<orders.length; i++){
+    return "=====";
+    return "id: " + i;
+    return "purchase date: " + orders[i].date;
+    return "purchase total: " + orders[i].total;
+  }
+}
+printProcessedOrders(arrayOfObjects);*/
 
 /*
     # Addition with an object
@@ -73,7 +156,19 @@
 
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
+     /* var sumObj = {
+        a: 3,
+        b: 8,
+        result: undefined
+      };
 
+      function objectAddition(obj){
+        obj.result = obj.a + obj.b;
+
+        return obj;
+      }
+
+      var sumObjResult = objectAddition(sumObj);*/
 
 /*
     # Print sum function and add as new key-value
@@ -89,6 +184,12 @@
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or **create more** objects and invoke your function multiple times.
  */
 
+     /* function printObj(obj){
+        obj.output = obj.a + ' + ' + obj.b + ' = ' + obj.result;
+        return obj.output;
+      }
+
+      printObj(sumObj);*/
 
 /*
     # Putting stuff in `plainBox`
@@ -97,7 +198,14 @@
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named plainBoxResult and use `console.log` to inspect your results.
  */
 
-
+   /*   function putInPlainBox(obj){
+         for(var i = 0; i<10; i++){
+          var randomNumber = Math.floor(Math.random()*20);
+          obj.contents.push(randomNumber);
+         } 
+         return obj;
+      }
+      var plainBoxResult = putInPlainBox(plainBox);*/
 /*
     # Detecting transmission
         Declare a function named detectingTranmission and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
@@ -106,8 +214,14 @@
 
         Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-
-
+    /*  function detectingTranmission(obj){
+        if(obj.automaticTransmission === true){
+          return "It's automatic son";
+        }else{
+          return "Hard Labor kid";
+        }
+      }
+      var isAutomaticTransmission = detectingTranmission(stockCar);*/
 /*
     # Who's driving this thing?!
         As you may have noticed that the `stockCar` doesn't have a driver!
@@ -117,7 +231,12 @@
         Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect your results. Consider using `plainPerson` as your driver.
  */
 
+    /*  function addDriver(car, person){
+        car.driver = person;
+        return car;
+      }
 
+      var stockCarWithDriver = addDriver(stockCar, plainPerson);*/
 /*
     # Final Boss
     The Dev League instructors want to ride your whip!
@@ -133,6 +252,7 @@
         You will have to populate the `passengers` array on the **car** object with proper objects that represent a person. Currently you have two arrays, one which contains names and another which contains ages.
 
         You should iterate through the names and ages, pass the values to your `buildPerson` function to build person objects (remember that this function returns a new object). Don't forget that this function actually takes **three** arguments, how will you handle that? (you should not have to change your function).
+
 
     Example of a loaded Car:
 
@@ -151,3 +271,27 @@
         'Victor, age 19, is riding dirty!'
  */
 
+
+/*var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+
+function addPassengers(car, names, ages){
+  for(var i = 0; i<names.length; i++){
+    var riders = {};
+    car.passengers.push(riders);
+  }
+  return car;
+
+
+}
+
+addPassengers(stockCar, passengerList, passengerAges);
+
+function displayPassengers(car){
+  for(var i = 0; i<car.passengers.length; i++){
+    return car.passengers[i].name + ", " + 'age ' + car.passengers[i].age + ' is riding dirty!';
+  }
+  return car;
+}
+displayPassengers(stockCar);*/
