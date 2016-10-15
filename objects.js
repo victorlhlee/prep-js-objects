@@ -100,7 +100,7 @@
 
 /*
     # Detecting transmission
-        Declare a function named detectingTranmission and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
+        Declare a function named detectingTransmission and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
 
         If `automaticTransmission` is true then print a message saying so. Also, provide an appropriate message for when the its false.
 
